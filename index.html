@@ -108,6 +108,22 @@ transform:translateY(0);
 transform:translateY(-15px);
 }
 }  
+
+.flame{
+font-size:45px;
+animation:flicker .8s infinite alternate;
+filter:drop-shadow(0 0 15px orange);
+}
+
+@keyframes flicker{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.15);
+}
+}
+  
 </style>
 
 </head>
@@ -157,6 +173,7 @@ function startJourney(){
 
 <p>Close your eyes and make a wish...</p>
 
+<div class="flame">🔥</div>
 <button onclick="blowCandle()">🕯️ Blow Out Candle</button>
 </div>
   
