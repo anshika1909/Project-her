@@ -3,153 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For Akrita ❤️</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
-/* PART 2 CSS YAHAN AAYEGI */
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#000;
+color:#fff;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+.page{display:none;flex-direction:column;align-items:center;justify-content:center;height:100vh;width:100%}
+.page.active{display:flex}
+#lights span{
+position:fixed;border-radius:50%;
+background:#ffd86b;filter:blur(6px);
+animation:float 8s linear infinite;
+}
+@keyframes float{
+from{transform:translateY(110vh)}
+to{transform:translateY(-20vh)}
+}
+.gift{
+width:120px;height:120px;background:#c62828;border-radius:10px;position:relative;
+cursor:pointer;animation:bob 2s ease-in-out infinite;
+}
+.gift:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:14px;background:#ffd86b;transform:translateX(-50%)}
+.gift:after{content:"";position:absolute;left:0;right:0;top:50%;height:14px;background:#ffd86b;transform:translateY(-50%)}
+@keyframes bob{50%{transform:translateY(-10px)}}
+button,input{padding:12px 20px;border-radius:30px;border:none;margin:10px}
+.big{font-size:54px}
+.small{font-size:18px;color:#ddd}
+.cake{font-size:120px}
 </style>
-
 </head>
-
 <body>
-
-<!-- Fairy Lights Background -->
 <div id="lights"></div>
 
-<!-- PAGE 1 -->
-<section id="page1" class="page active">
-
-<div class="content">
-
-<h1 class="main-title">
-A Surprise Awaits You... ⭐
-</h1>
-
-<p class="subtitle">
-✨ Something special, just for you ✨
-</p>
-
-<div class="gift-wrapper" onclick="openGift()">
-
-<div class="gift-box">
-<div class="gift-lid"></div>
-<div class="gift-ribbon-v"></div>
-<div class="gift-ribbon-h"></div>
-</div>
-
-</div>
-
-<p class="tap-text">
-Tap the gift to begin the magic...
-</p>
-
-</div>
-
+<section id="p1" class="page active">
+<h1>A Surprise Awaits You... ⭐</h1>
+<p>✨Something special, just for you✨</p>
+<div class="gift" onclick="show('p2')"></div>
+<p>Tap the gift to begin the magic...</p>
 </section>
 
-
-
-<!-- PAGE 2 -->
-<section id="page2" class="page">
-
-<div class="content">
-
-<div class="lock-icon">
-<div class="lock-top"></div>
-<div class="lock-body"></div>
-</div>
-
-<h2 class="lock-title">
-Only someone special knows the secret... 💛
-</h2>
-
-<input
-type="password"
-id="pinInput"
-maxlength="4"
-placeholder="Enter PIN"
-/>
-
-<button class="unlock-btn" onclick="checkPin()">
-Unlock
-</button>
-
-<p id="errorText"></p>
-
-</div>
-
+<section id="p2" class="page">
+<h1>🔒</h1>
+<h2>Only someone special knows the secret... 💛</h2>
+<input id="pin" type="password" maxlength="4" placeholder="Enter PIN">
+<button onclick="unlock()">Unlock</button>
+<p id="err"></p>
 </section>
 
-
-
-<!-- LOADING PAGE -->
-<section id="loadingPage" class="page">
-
-<div class="content">
-
-<h2 class="loading-text">
-Loading something special for you...
-</h2>
-
-<div class="loader">
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-</div>
-
+<section id="loading" class="page">
+<h2>Loading something special for you...</h2>
 </section>
 
-
-
-<!-- PAGE 3 -->
-<section id="page3" class="page">
-
-<div class="content reveal-content">
-
-<h2 class="birthday-line">
-Happiest Birthday
-</h2>
-
-<h2 class="birthday-line">
-To You
-</h2>
-
-<h1 class="akrita">
-AKRITA ❤️
-</h1>
-
-<p class="monkey">
-🧿My monkey🐒
-</p>
-
-<div class="big-cake">
-🎂
-</div>
-
-<p class="wish-text">
-🌠 Make a wish...
-</p>
-
-<button class="memory-btn">
-See Our Memories →
-</button>
-
-</div>
-
+<section id="p3" class="page">
+<h2>Happiest Birthday</h2>
+<h2>To You</h2>
+<div class="big">AKRITA ❤️</div>
+<div class="small">🧿My monkey🐒</div>
+<div class="cake">🎂</div>
+<p>🌠 Make a wish...</p>
+<button>See Our Memories →</button>
 </section>
-
-
 
 <script>
-/* PART 1B JAVASCRIPT YAHAN AAYEGI */
+for(let i=0;i<35;i++){
+ let s=document.createElement('span');
+ let size=8+Math.random()*20;
+ s.style.width=size+'px';
+ s.style.height=size+'px';
+ s.style.left=Math.random()*100+'vw';
+ s.style.animationDelay=(Math.random()*8)+'s';
+ s.style.opacity=.3+Math.random()*.7;
+ document.getElementById('lights').appendChild(s);
+}
+function show(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+function unlock(){
+ if(document.getElementById('pin').value==='1909'){
+   show('loading');
+   setTimeout(()=>show('p3'),2000);
+ }else{
+   document.getElementById('err').textContent='❌ Wrong PIN';
+ }
+}
 </script>
-
 </body>
 </html>
