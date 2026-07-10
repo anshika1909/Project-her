@@ -3,408 +3,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Akrita ❤️</title>
+
+<title>For Akrita ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-  
-body{
-margin:0;
-background:#000;
-color:white;
-font-family:Arial,sans-serif;
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-text-align:center;
-}
-
-.container{
-padding:20px;
-animation:fade 2s ease;
-}
-
-h1{
-font-size:42px;
-margin-bottom:15px;
-}
-
-p{
-font-size:20px;
-color:#ddd;
-}
-
-button{
-margin-top:35px;
-padding:15px 35px;
-border:none;
-border-radius:40px;
-font-size:18px;
-background:white;
-color:black;
-cursor:pointer;
-transition:.3s;
-box-shadow:0 0 25px #ffd700;
-}
-
-button:hover{
-transform:scale(1.08);
-}
-
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-.heart{
-position:fixed;
-left:50%;
-bottom:-50px;
-font-size:40px;
-animation:rise 5s infinite;
-z-index:10;
-}
-
-@keyframes rise{
-0%{
-transform:translateY(0);
-opacity:1;
-}
-100%{
-transform:translateY(-100vh);
-opacity:0;
-}
-}
-.blue{
-color:#00d4ff;
-}
-
-.purple{
-color:#b56cff;
-}
-
-.white{
-color:white;
-}
-
-.cake{
-font-size:90px;
-animation:bounce 2s infinite;
-filter:drop-shadow(0 0 25px #ffd700);
-}
-
-@keyframes bounce{
-0%,100%{
-transform:translateY(0);
-}
-50%{
-transform:translateY(-15px);
-}
-}  
-
-.sparkle{
-position:absolute;
-width:25px;
-height:25px;
-background:#ffd700;
-border-radius:50%;
-filter:blur(4px);
-box-shadow:0 0 40px 15px #ffd700;
-opacity:0.7;
-animation:riseGlow 6s infinite ease-in-out;
-}
-
-@keyframes riseGlow{
-0%{
-transform:translateY(100vh) scale(0.8);
-opacity:0;
-}
-
-30%{
-opacity:0.9;
-}
-
-70%{
-opacity:0.7;
-}
-
-100%{
-transform:translateY(-20vh) scale(1.5);
-opacity:0;
-}
-}
-@keyframes glow{
-0%{
-transform:translateY(0) scale(1);
-opacity:0.3;
-}
-
-50%{
-opacity:1;
-transform:translateY(-40px) scale(1.5);
-}
-
-100%{
-transform:translateY(-100px) scale(1);
-opacity:0;
-}
-}
-
-.lockPage{
-height:100vh;
-width:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background:#000;
-color:white;
-text-align:center;
-}
-
-.lockPage h1{
-font-size:90px;
-filter:drop-shadow(0 0 30px #ffd700);
-}
-
-input{
-padding:15px;
-border-radius:30px;
-border:none;
-font-size:18px;
-text-align:center;
-margin-top:20px;
-}
-
-.lockPage button{
-box-shadow:0 0 25px #ffd700;
-}
-
-  .loading h2{
-font-size:28px;
-animation:pulse 1s infinite;
-}
-
-.birthdayReveal{
-text-align:center;
-animation:fade 2s ease;
-transform:translateY(-90px);
-}
-
-.birthdayReveal h2{
-font-size:34px;
-margin:4px 0;
-font-weight:500;
-color:white;
-}
-
-.birthdayReveal h1{
-font-size:72px;
-margin:6px 0;
-color:white;
-text-shadow:none;
-}
-
-.birthdayReveal p{
-font-size:15px;
-margin-top:-2px;
-margin-bottom:28px;
-color:#d9d9d9;
-}
-
-@keyframes pulse{
-50%{
-opacity:0.5;
-}
-}
-.stats{
-margin-top:25px;
-color:white;
-width:100%;
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
-.stats h3{
-font-size:22px;
-font-weight:normal;
-margin-bottom:25px;
-}
-
-.numbers{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:90px;
-margin:18px 0;
-width:100%;
-}
-
-.numbers div{
-text-align:center;
-min-width:120px;
-}
-
-.numbers span{
-font-size:46px;
-font-weight:bold;
-color:white;
-}
-
-.numbers p{
-font-size:17px;
-margin-top:5px;
-color:#d8d8d8;
-}
-  
+/* PART 2 CSS YAHAN AAYEGI */
 </style>
 
 </head>
 
 <body>
 
-<div class="sparkle" style="left:10%;top:80%;animation-delay:1s;"></div>
-<div class="sparkle" style="left:25%;top:60%;animation-delay:3s;"></div>
-<div class="sparkle" style="left:45%;top:90%;animation-delay:2s;"></div>
-<div class="sparkle" style="left:70%;top:70%;animation-delay:4s;"></div>
-<div class="sparkle" style="left:85%;top:50%;animation-delay:1.5s;"></div>
-<div class="sparkle" style="left:55%;top:40%;animation-delay:5s;"></div>
-<div class="container">
+<!-- Fairy Lights Background -->
+<div id="lights"></div>
 
-<div class="cake">
+<!-- PAGE 1 -->
+<section id="page1" class="page active">
+
+<div class="content">
+
+<h1 class="main-title">
+A Surprise Awaits You... ⭐
+</h1>
+
+<p class="subtitle">
+✨ Something special, just for you ✨
+</p>
+
+<div class="gift-wrapper" onclick="openGift()">
+
+<div class="gift-box">
+<div class="gift-lid"></div>
+<div class="gift-ribbon-v"></div>
+<div class="gift-ribbon-h"></div>
+</div>
+
+</div>
+
+<p class="tap-text">
+Tap the gift to begin the magic...
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- PAGE 2 -->
+<section id="page2" class="page">
+
+<div class="content">
+
+<div class="lock-icon">
+<div class="lock-top"></div>
+<div class="lock-body"></div>
+</div>
+
+<h2 class="lock-title">
+Only someone special knows the secret... 💛
+</h2>
+
+<input
+type="password"
+id="pinInput"
+maxlength="4"
+placeholder="Enter PIN"
+/>
+
+<button class="unlock-btn" onclick="checkPin()">
+Unlock
+</button>
+
+<p id="errorText"></p>
+
+</div>
+
+</section>
+
+
+
+<!-- LOADING PAGE -->
+<section id="loadingPage" class="page">
+
+<div class="content">
+
+<h2 class="loading-text">
+Loading something special for you...
+</h2>
+
+<div class="loader">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PAGE 3 -->
+<section id="page3" class="page">
+
+<div class="content reveal-content">
+
+<h2 class="birthday-line">
+Happiest Birthday
+</h2>
+
+<h2 class="birthday-line">
+To You
+</h2>
+
+<h1 class="akrita">
+AKRITA ❤️
+</h1>
+
+<p class="monkey">
+🧿My monkey🐒
+</p>
+
+<div class="big-cake">
 🎂
 </div>
-<h1>Happy Birthday, Akrita! 🎉❤️</h1>
-<h2>19 September 2026</h2>
 
-<p>
-Before you continue...
+<p class="wish-text">
+🌠 Make a wish...
 </p>
 
-<p>
-I made something for you.
-</p>
-
-<button onclick="startJourney()">
-💌 SEE SURPRISE
+<button class="memory-btn">
+See Our Memories →
 </button>
 
 </div>
+
+</section>
+
+
 
 <script>
-function startJourney(){
-
-document.querySelector(".container").style.display="none";
-
-document.getElementById("lockPage").style.display="flex";
-
-  }
-  function unlock(){
-
-let pin=document.getElementById("pinInput").value;
-
-if(pin=="1909"){
-
-document.getElementById("lockPage").innerHTML = `
-<div class="loading">
-<h2>✨ Loading something special for you... ✨</h2>
-</div>
-`;
-
-setTimeout(function(){
-
-document.getElementById("lockPage").innerHTML = `
-<div class="birthdayReveal">
-
-<h2>Happiest Birthday</h2>
-
-<h2>To you</h2>
-
-<h1>AKRITA ❤️</h1>
-
-<p>🧿My monkey🐒</p>
-<div class="stats">
-
-<h3>The World has been Better Since❤️</h3>
-
-<div class="numbers">
-<div>
-<span>17</span>
-<p>Years</p>
-</div>
-
-<div>
-<span>6205</span>
-<p>Days</p>
-</div>
-</div>
-
-
-<div class="numbers">
-
-<div>
-<span>148920</span>
-<p>Hours</p>
-</div>
-
-<div>
-<span>8935200</span>
-<p>Minutes</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-`;
-
-},2000);
-
-}
-
-else{
-
-document.getElementById("error").innerHTML =
-"❌ Wrong PIN, try again";
-
-}
-
-  }
-  
-
+/* PART 1B JAVASCRIPT YAHAN AAYEGI */
 </script>
 
-  <div id="lockPage" style="display:none;" class="lockPage">
-
-<h1>🔐</h1>
-
-<h2>Secret Surprise</h2>
-
-<p>Enter the secret PIN to unlock 💛</p>
-
-<input id="pinInput" type="password" placeholder="Enter PIN">
-
-<br>
-
-<button onclick="unlock()">
-✨ Unlock
-</button>
-
-    
-<p id="error"></p>
-
-  </div>
-  
 </body>
-
-  </html>
+</html>
