@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Akrita ❤️</title>
+<title>Happy Birthday Akrita ❤️</title>
 
 <style>
 
@@ -70,7 +70,8 @@ transform:translateY(0);
 
 <div class="container">
 
-<h1>Hey Akrita... ❤️</h1>
+<h1>Happy Birthday, Akrita! 🎉❤️</h1>
+<h2>19 September 2026</h2>
 
 <p>
 Before you continue...
@@ -81,7 +82,7 @@ I made something for you.
 </p>
 
 <button onclick="startJourney()">
-Begin ✨
+🎂 Start Celebration
 </button>
 
 </div>
@@ -90,12 +91,29 @@ Begin ✨
 
 function startJourney(){
 
-alert("Welcome to our little journey ❤️");
+window.location.href = "#celebration";
 
 }
 
 </script>
+<div id="celebration" style="height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;background:#111;">
 
+<h1>🎂 Happy Birthday Akrita ❤️</h1>
+
+<p>Close your eyes and make a wish...</p>
+
+<button onclick="blowCandle()">🕯️ Blow Out Candle</button>
+
+<p id="wish"></p>
+
+</div>
+
+<script>
+function blowCandle(){
+document.getElementById("wish").innerHTML =
+"✨ I hope every wish you made today comes true. ❤️";
+}
+</script>
 </body>
 
   </html>
