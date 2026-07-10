@@ -63,23 +63,22 @@ transform:translateY(0);
 }
 }
 
-  .heart{
-position:absolute;
-color:#00d4ff;
-font-size:25px;
-animation:float 6s infinite;
+.heart{
+position:fixed;
+left:50%;
+bottom:-50px;
+font-size:40px;
+animation:rise 5s infinite;
+z-index:10;
 }
 
-@keyframes float{
+@keyframes rise{
 0%{
-transform:translateY(100vh);
-opacity:0;
-}
-50%{
+transform:translateY(0);
 opacity:1;
 }
 100%{
-transform:translateY(-10vh);
+transform:translateY(-100vh);
 opacity:0;
 }
 }
@@ -90,10 +89,7 @@ opacity:0;
 
 <body>
 
-<div class="heart" style="left:10%;">💙</div>
-<div class="heart" style="left:30%;animation-delay:2s;">✨</div>
-<div class="heart" style="left:50%;animation-delay:4s;">💙</div>
-<div class="heart" style="left:75%;animation-delay:1s;">✨</div>
+<div class="heart">💙</div>
   
 <div class="container">
 
