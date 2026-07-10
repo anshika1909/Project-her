@@ -7,25 +7,6 @@
 
 <style>
 
-  <div id="lockPage" style="display:none;" class="lockPage">
-
-<h1>🔐</h1>
-
-<h2>Secret Surprise</h2>
-
-<p>Enter the secret PIN to unlock 💛</p>
-
-<input id="pinInput" type="password" placeholder="Enter PIN">
-
-<br>
-
-<button onclick="unlock()">
-✨ Unlock
-</button>
-
-<p id="error"></p>
-
-</div>
   
 body{
 margin:0;
@@ -177,7 +158,7 @@ opacity:0;
 }
 }
 
-  .lockPage{
+.lockPage{
 height:100vh;
 width:100%;
 display:flex;
@@ -185,6 +166,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 background:#000;
+color:white;
 text-align:center;
 }
 
@@ -272,6 +254,25 @@ document.getElementById("error").innerHTML=
 
 </script>
 
+  <div id="lockPage" style="display:none;" class="lockPage">
+
+<h1>🔐</h1>
+
+<h2>Secret Surprise</h2>
+
+<p>Enter the secret PIN to unlock 💛</p>
+
+<input id="pinInput" type="password" placeholder="Enter PIN">
+
+<br>
+
+<button onclick="unlock()">
+✨ Unlock
+</button>
+
+<p id="error"></p>
+
+  </div>
   
 </body>
 
