@@ -187,6 +187,37 @@ margin-top:20px;
 .lockPage button{
 box-shadow:0 0 25px #ffd700;
 }
+
+  .loading h2{
+font-size:28px;
+animation:pulse 1s infinite;
+}
+
+.birthdayReveal{
+text-align:center;
+animation:fade 2s ease;
+}
+
+.birthdayReveal h2{
+font-size:35px;
+}
+
+.birthdayReveal h1{
+font-size:70px;
+color:#ffd700;
+text-shadow:0 0 30px #ffd700;
+}
+
+.birthdayReveal p{
+font-size:16px;
+margin-top:-20px;
+}
+
+@keyframes pulse{
+50%{
+opacity:0.5;
+}
+}
   
 </style>
 
@@ -236,9 +267,6 @@ let pin=document.getElementById("pinInput").value;
 
 if(pin=="1909"){
 
-document.getElementById("lockPage").innerHTML=
-"<h1>🎉 Surprise Unlocked 💛</h1>";
-
 }
 
 else{
@@ -270,6 +298,49 @@ document.getElementById("error").innerHTML=
 ✨ Unlock
 </button>
 
+function unlock(){
+
+let pin=document.getElementById("pinInput").value;
+
+if(pin=="1909"){
+
+document.getElementById("lockPage").innerHTML=
+`
+<div class="loading">
+<h2>✨ Loading something special for you... ✨</h2>
+</div>
+`;
+
+setTimeout(function(){
+
+document.getElementById("lockPage").innerHTML=
+`
+<div class="birthdayReveal">
+
+<h2>Happiest Birthday</h2>
+
+<h2>To you</h2>
+
+<h1>AKRITA ❤️</h1>
+
+<p>🧿My monkey🐒</p>
+
+</div>
+`;
+
+},2000);
+
+}
+
+else{
+
+document.getElementById("error").innerHTML=
+"❌ Wrong PIN, try again";
+
+}
+
+}
+    
 <p id="error"></p>
 
   </div>
