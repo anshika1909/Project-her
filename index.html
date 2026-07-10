@@ -7,6 +7,26 @@
 
 <style>
 
+  <div id="lockPage" style="display:none;" class="lockPage">
+
+<h1>🔐</h1>
+
+<h2>Secret Surprise</h2>
+
+<p>Enter the secret PIN to unlock 💛</p>
+
+<input id="pinInput" type="password" placeholder="Enter PIN">
+
+<br>
+
+<button onclick="unlock()">
+✨ Unlock
+</button>
+
+<p id="error"></p>
+
+</div>
+  
 body{
 margin:0;
 background:#000;
@@ -156,6 +176,35 @@ transform:translateY(-100px) scale(1);
 opacity:0;
 }
 }
+
+  .lockPage{
+height:100vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:#000;
+text-align:center;
+}
+
+.lockPage h1{
+font-size:90px;
+filter:drop-shadow(0 0 30px #ffd700);
+}
+
+input{
+padding:15px;
+border-radius:30px;
+border:none;
+font-size:18px;
+text-align:center;
+margin-top:20px;
+}
+
+.lockPage button{
+box-shadow:0 0 25px #ffd700;
+}
   
 </style>
 
@@ -193,8 +242,31 @@ I made something for you.
 
 <script>
 function startJourney(){
-alert("✨ Surprise coming soon ❤️");
+
+document.querySelector(".container").style.display="none";
+
+document.getElementById("lockPage").style.display="flex";
+
+  }
+  function unlock(){
+
+let pin=document.getElementById("pinInput").value;
+
+if(pin=="1909"){
+
+document.getElementById("lockPage").innerHTML=
+"<h1>🎉 Surprise Unlocked 💛</h1>";
+
 }
+
+else{
+
+document.getElementById("error").innerHTML=
+"❌ Wrong PIN, try again";
+
+}
+
+  }
 </script>
   
 
