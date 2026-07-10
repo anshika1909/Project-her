@@ -196,22 +196,28 @@ animation:pulse 1s infinite;
 .birthdayReveal{
 text-align:center;
 animation:fade 2s ease;
-transform:translateY(-60px);
+transform:translateY(-90px);
 }
 
 .birthdayReveal h2{
-font-size:35px;
+font-size:34px;
+margin:4px 0;
+font-weight:500;
+color:white;
 }
 
 .birthdayReveal h1{
-font-size:70px;
+font-size:72px;
+margin:6px 0;
 color:white;
-text-shadow:0 0 25px #8fd8ff, 0 0 45px #6bbcff;
+text-shadow:none;
 }
 
 .birthdayReveal p{
-font-size:16px;
-margin-top:-20px;
+font-size:15px;
+margin-top:-2px;
+margin-bottom:28px;
+color:#d9d9d9;
 }
 
 @keyframes pulse{
@@ -219,34 +225,46 @@ margin-top:-20px;
 opacity:0.5;
 }
 }
-  .stats{
-margin-top:30px;
+.stats{
+margin-top:25px;
 color:white;
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 .stats h3{
 font-size:22px;
 font-weight:normal;
+margin-bottom:25px;
 }
 
 .numbers{
 display:flex;
 justify-content:center;
-gap:60px;
-margin-top:20px;
+align-items:center;
+gap:90px;
+margin:18px 0;
+width:100%;
+}
+
+.numbers div{
+text-align:center;
+min-width:120px;
 }
 
 .numbers span{
-font-size:45px;
+font-size:46px;
 font-weight:bold;
 color:white;
-text-shadow:0 0 15px #8fd8ff;
 }
 
 .numbers p{
-font-size:16px;
-margin-top:-5px;
-  }
+font-size:17px;
+margin-top:5px;
+color:#d8d8d8;
+}
   
 </style>
 
