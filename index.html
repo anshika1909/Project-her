@@ -267,17 +267,40 @@ let pin=document.getElementById("pinInput").value;
 
 if(pin=="1909"){
 
+document.getElementById("lockPage").innerHTML = `
+<div class="loading">
+<h2>✨ Loading something special for you... ✨</h2>
+</div>
+`;
+
+setTimeout(function(){
+
+document.getElementById("lockPage").innerHTML = `
+<div class="birthdayReveal">
+
+<h2>Happiest Birthday</h2>
+
+<h2>To you</h2>
+
+<h1>AKRITA ❤️</h1>
+
+<p>🧿My monkey🐒</p>
+
+</div>
+`;
+
+},2000);
+
 }
 
 else{
 
-document.getElementById("error").innerHTML=
+document.getElementById("error").innerHTML =
 "❌ Wrong PIN, try again";
 
 }
 
   }
-</script>
   
 
 </script>
@@ -298,49 +321,6 @@ document.getElementById("error").innerHTML=
 ✨ Unlock
 </button>
 
-function unlock(){
-
-let pin=document.getElementById("pinInput").value;
-
-if(pin=="1909"){
-
-document.getElementById("lockPage").innerHTML=
-`
-<div class="loading">
-<h2>✨ Loading something special for you... ✨</h2>
-</div>
-`;
-
-setTimeout(function(){
-
-document.getElementById("lockPage").innerHTML=
-`
-<div class="birthdayReveal">
-
-<h2>Happiest Birthday</h2>
-
-<h2>To you</h2>
-
-<h1>AKRITA ❤️</h1>
-
-<p>🧿My monkey🐒</p>
-
-</div>
-</div>
-`;
-
-},2000);
-
-}
-
-else{
-
-document.getElementById("error").innerHTML=
-"❌ Wrong PIN, try again";
-
-}
-
-}
     
 <p id="error"></p>
 
