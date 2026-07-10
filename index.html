@@ -88,22 +88,19 @@ I made something for you.
 </div>
 
 <script>
-
 function startJourney(){
-
-window.location.href = "#celebration";
-
+  document.getElementById("celebration").style.display="flex";
 }
-
 </script>
-<div id="celebration" style="height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;background:#111;">
-
+  
+<div id="celebration" style="height:100vh;display:none;justify-content:center;align-items:center;flex-direction:column;background:#111;">
 <h1>🎂 Happy Birthday Akrita ❤️</h1>
 
 <p>Close your eyes and make a wish...</p>
 
 <button onclick="blowCandle()">🕯️ Blow Out Candle</button>
-
+</div>
+  
 <p id="wish"></p>
 
 </div>
@@ -114,6 +111,8 @@ document.getElementById("wish").innerHTML =
 "✨ I hope every wish you made today comes true. ❤️";
 }
 </script>
+
+  
 </body>
 
   </html>
