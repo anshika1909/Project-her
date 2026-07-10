@@ -188,9 +188,27 @@ function startJourney(){
 
 <script>
 function blowCandle(){
-document.getElementById("wish").innerHTML =
-"✨ I hope every wish you made today comes true. ❤️";
+
+document.querySelector(".flame").style.display="none";
+
+let text = "✨ I hope every wish you made today comes true. ❤️";
+let i = 0;
+let wish = document.getElementById("wish");
+
+wish.innerHTML = "";
+
+let typing = setInterval(function(){
+
+wish.innerHTML += text.charAt(i);
+i++;
+
+if(i >= text.length){
+clearInterval(typing);
 }
+
+},70);
+
+  }
 </script>
 
   
