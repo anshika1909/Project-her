@@ -128,7 +128,33 @@ to{
 transform:scale(1.15);
 }
 }
-  
+
+.wind{
+position:absolute;
+top:25%;
+left:35%;
+font-size:40px;
+opacity:0;
+}
+
+.wind.blow{
+animation:windMove 1s forwards;
+}
+
+@keyframes windMove{
+0%{
+opacity:0;
+transform:translateX(0);
+}
+50%{
+opacity:1;
+transform:translateX(40px);
+}
+100%{
+opacity:0;
+transform:translateX(80px);
+}
+}
 </style>
 
 </head>
@@ -179,6 +205,7 @@ function startJourney(){
 <p>Close your eyes and make a wish...</p>
 
 <div class="flame">🕯️</div>
+<div class="wind">💨</div>
 <button onclick="blowCandle()">🕯️ Blow Out Candle</button>
 </div>
   
@@ -189,7 +216,15 @@ function startJourney(){
 <script>
 function blowCandle(){
 
-document.querySelector(".flame").style.display="none";
+let wind = document.querySelector(".wind");
+let flame = document.querySelector(".flame");
+
+wind.classList.add("blow");
+
+setTimeout(function(){
+flame.style.display="none";
+},800);
+}
 
 let text = "✨ I hope every wish you made today comes true. ❤️";
 let i = 0;
