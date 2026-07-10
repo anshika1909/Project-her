@@ -109,42 +109,6 @@ transform:translateY(-15px);
 }
 }  
 
-.flame{
-font-size:45px;
-position:absolute;
-top:22%;
-left:50%;
-transform:translateX(-50%);
-animation:flicker .8s infinite alternate;
-filter:drop-shadow(0 0 15px orange);
-}
-
-.wind{
-font-size:40px;
-position:absolute;
-top:22%;
-left:25%;
-opacity:0;
-}
-
-.wind.blow{
-animation:windMove 1s forwards;
-}
-
-@keyframes windMove{
-0%{
-opacity:0;
-transform:translateX(0);
-}
-50%{
-opacity:1;
-transform:translateX(80px);
-}
-100%{
-opacity:0;
-transform:translateX(140px);
-}
-}
 
   
 </style>
@@ -179,62 +143,18 @@ I made something for you.
 </p>
 
 <button onclick="startJourney()">
-🎂 Start Celebration
+💌 SEE SURPRISE
 </button>
 
 </div>
 
 <script>
 function startJourney(){
-  document.querySelector(".container").style.display="none";
-  document.getElementById("celebration").style.display="flex";
+alert("✨ Surprise coming soon ❤️");
 }
 </script>
   
-<div id="celebration" style="height:100vh;width:100%;display:none;justify-content:center;align-items:center;flex-direction:column;background:linear-gradient(135deg,#020024,#090979,#00d4ff);position:relative;">
-<h1>🎂 Happy Birthday Akrita ❤️</h1>
 
-<p>Close your eyes and make a wish...</p>
-  
-
-<div class="flame">🔥</div>
-<div class="wind">💨</div>
-<button onclick="blowCandle()">🕯️ Blow Out Candle</button>
-</div>
-  
-<p id="wish" style="position:absolute; top:85%; left:0; width:100%; text-align:center;"></p>
-
-</div>
-
-<script>
-function blowCandle(){
-
-let wind = document.querySelector(".wind");
-let flame = document.querySelector(".flame");
-document.querySelector(".wind").classList.add("blow");
-
-setTimeout(()=>{
-document.querySelector(".flame").style.display="none";
-},1000);
-
-let text = "✨ I hope every wish you made today comes true. ❤️";
-let i = 0;
-let wish = document.getElementById("wish");
-
-wish.innerHTML = "";
-
-let typing = setInterval(function(){
-
-wish.innerHTML += text.charAt(i);
-i++;
-
-if(i >= text.length){
-clearInterval(typing);
-}
-
-},70);
-
-  }
 </script>
 
   
