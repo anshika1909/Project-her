@@ -111,8 +111,13 @@ transform:translateY(-15px);
 
 .flame{
 font-size:45px;
+position:absolute;
+top:25%;
+left:50%;
+transform:translateX(-50%);
 animation:flicker .8s infinite alternate;
 filter:drop-shadow(0 0 15px orange);
+}
 }
 
 @keyframes flicker{
@@ -173,7 +178,7 @@ function startJourney(){
 
 <p>Close your eyes and make a wish...</p>
 
-<div class="flame">🔥</div>
+<div class="flame">🕯️</div>
 <button onclick="blowCandle()">🕯️ Blow Out Candle</button>
 </div>
   
