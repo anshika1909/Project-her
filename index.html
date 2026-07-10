@@ -196,6 +196,7 @@ animation:pulse 1s infinite;
 .birthdayReveal{
 text-align:center;
 animation:fade 2s ease;
+transform:translateY(-60px);
 }
 
 .birthdayReveal h2{
@@ -204,8 +205,8 @@ font-size:35px;
 
 .birthdayReveal h1{
 font-size:70px;
-color:#ffd700;
-text-shadow:0 0 30px #ffd700;
+color:white;
+text-shadow:0 0 25px #8fd8ff, 0 0 45px #6bbcff;
 }
 
 .birthdayReveal p{
@@ -218,6 +219,34 @@ margin-top:-20px;
 opacity:0.5;
 }
 }
+  .stats{
+margin-top:30px;
+color:white;
+}
+
+.stats h3{
+font-size:22px;
+font-weight:normal;
+}
+
+.numbers{
+display:flex;
+justify-content:center;
+gap:60px;
+margin-top:20px;
+}
+
+.numbers span{
+font-size:45px;
+font-weight:bold;
+color:white;
+text-shadow:0 0 15px #8fd8ff;
+}
+
+.numbers p{
+font-size:16px;
+margin-top:-5px;
+  }
   
 </style>
 
@@ -285,6 +314,38 @@ document.getElementById("lockPage").innerHTML = `
 <h1>AKRITA ❤️</h1>
 
 <p>🧿My monkey🐒</p>
+<div class="stats">
+
+<h3>The World has been Better Since❤️</h3>
+
+<div class="numbers">
+<div>
+<span>17</span>
+<p>Years</p>
+</div>
+
+<div>
+<span>6205</span>
+<p>Days</p>
+</div>
+</div>
+
+
+<div class="numbers">
+
+<div>
+<span>148920</span>
+<p>Hours</p>
+</div>
+
+<div>
+<span>8935200</span>
+<p>Minutes</p>
+</div>
+
+</div>
+
+</div>
 
 </div>
 `;
